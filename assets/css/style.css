@@ -5,6 +5,11 @@ For the whole page
 
 */
 
+.aligncent {
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
 body {
     accent-color: red;
     max-height: 100vh;
