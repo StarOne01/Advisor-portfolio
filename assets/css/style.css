@@ -43,14 +43,8 @@ body {
     -webkit-backdrop-filter: blur(4.6px);
     z-index: 1005;
 }
-/*
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  padding: 5%;
-}
-*/
+
+
 /* Desktop Navigation */
 .nav-menu {
     padding: 30px 0 0 0;
@@ -107,37 +101,7 @@ body {
     height: 36px;
     transition: 0.3s;
 }
-/*
-#navbar ul {
-  border: 1px solid red;
-    margin-left: auto;
-  margin-right: auto;
-  display: block;
-  align-items: center;
-  width: 70vw;
-  
-  
-  height: fit-content;
-}
-*/
 
-/*
-nav {
-  margin: 0;
-  padding: 0;
-  background-color: white;
-  list-style: none;
-}
-*/
-/*
-#about ul {
-    list-style: none;
-     margin-bottom: 20px;
-    display: block;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}*/
 p {
     text-align: left;
     margin: 4mm;
@@ -146,19 +110,6 @@ p {
 .skill {
     text-align: left;
 }
-/*
-nav ul {
-  margin: 20px;
-  position: relative;
-  bottom: 20px;
-  height: 100%;
-  width: 100%;
-  list-style: none;
-  margin-top: auto;
-  margin-bottom: auto;
-  padding-left: 20px;
-}
-*/
 
 #V {
     color: red;
@@ -204,12 +155,6 @@ h6 {
     font-family: "Raleway", sans-serif !important;
 }
 
-/*
-section {
-  padding: 60px 0;
-  overflow: hidden;
-}*/
-
 section {
     margin: auto;
     height: 95vh;
@@ -231,21 +176,10 @@ section {
     padding-bottom: 5vw;
     height: 100vh;
     text-align: center;
-    /*
-  margin-top: 8vh;
-  margin-bottom: 8vh;
-  margin-left: 2.5vw;
-  margin-right: 2.5vw;*/
     margin: auto;
-    /* border: 1px solid red; */
     border-radius: 10px;
    
 }
-
-/*
-.section-bg {
-  background: #f5f8fd;
-}*/
 
 .section-title {
     position: sticky;
@@ -288,11 +222,13 @@ section {
   width: 300px;
   transition: all ease-in-out 0.5s;
   z-index: 9997;
+  border-right: 2px solid red;
   transition: all 0.5s;
   padding: 0 15px;
   background: #040b14;
   overflow-y: auto;
 }
+
 
 .header .profile img {
   margin: 15px auto;
@@ -321,7 +257,7 @@ section {
   font-size: 18px;
   display: inline-block;
   background: #212431;
-  color: #fff;
+  color: red;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -333,7 +269,7 @@ section {
 }
 
 .header .profile .social-links a:hover {
-  background: #149ddd;
+  background: red;
   color: #fff;
   text-decoration: none;
 }
