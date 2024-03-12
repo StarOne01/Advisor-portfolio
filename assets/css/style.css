@@ -134,17 +134,6 @@ html {
     animation-iteration-count: infinite;
 }
 
-/*
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-}
-
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}*/
 
 h1,
 h2,
@@ -186,7 +175,8 @@ section {
     top: 0;
     background-color: #000000ad;
     font-weight: 700;
-    padding-bottom: 30px;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .section-title h2 {
@@ -291,7 +281,8 @@ section {
     top: 0;
     right: 0;
     bottom: 0;
-    width: 75vw;
+    width: 50vw;
+    max-width: 400px;
     transform: translateX(100%);
     transition: transform ease-in-out 0.5s;
     z-index: 9997;
@@ -316,6 +307,7 @@ section {
     text-align-last: center;
     font-family: "Poppins", sans-serif;
 }
+
 
 .header .profile h1 a,
 .header .profile h1 a:hover {
@@ -639,4 +631,40 @@ section {
 
 nav ul {
     padding: 10px 10px 10px 10px !important;
+}
+
+#contactDiv {
+    background-color: #040b14;
+    border: 7px double red;
+    display: grid;
+    border-radius: 20px;
+}
+
+
+#contactDiv .row .col-sm {
+    margin: 10vw;
+    padding: 10px;
+    height: 300px;
+    border: 2px solid #424242ad;
+    border-radius: 20px;
+
+ 
+}
+
+
+@media (max-width: 768px) {
+    #contactDiv .row .col-sm {
+        margin: 0;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+.contactHead {
+    font-weight: bold;
+    color: #424242ad;
+}
+
+#contactDiv .row {
+    padding: 10px;
 }
