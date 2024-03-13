@@ -15,6 +15,24 @@ window.onload = () => {
     }
   });
 
+  let backToTopBtn = document.getElementById("back-to-top");
+
+  window.addEventListener("scroll", function () {
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", function () {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  });
+
   menu.addEventListener("click", () => {
     if (window.innerWidth < 1199) {
       menu.style.transform = "translateX(100%)";
@@ -23,21 +41,6 @@ window.onload = () => {
     }
   });
 
-  window.requestAnimationFrame =
-    window.requestAnimationFrame ||
-    window.mozRequestAnimationFrame ||
-    window.webkitRequestanimationframe ||
-    window.msRequestAnimationFrame ||
-    function (f) {
-      return setTimeout(f, 1000 / 60);
-    }; // simulate calling code 60
-
-  window.cancelAnimationFrame =
-    window.cancelAnimationFrame ||
-    window.mozCancelAnimationFrame ||
-    function (requestID) {
-      clearTimeout(requestID);
-    }; //fall back
   gsap.registerPlugin(ScrollTrigger);
   gsap.to("#pageProgress", {
     value: 100,
@@ -112,8 +115,8 @@ window.onload = () => {
       let section = select(navbarlink.hash);
       if (!section) return;
       if (
-          (position) >= section.offsetTop &&
-              (position) <= section.offsetTop + section.offsetHeight
+        position >= section.offsetTop &&
+        position <= section.offsetTop + section.offsetHeight
       ) {
         navbarlink.classList.add("active");
       } else {
@@ -160,95 +163,6 @@ window.onload = () => {
       },
     });
   }
-  /*
-  
-   * Porfolio isotope and filter
-  */
-  window.addEventListener("load", () => {
-    let portfolioContainer = select(".portfolio-container");
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: ".portfolio-item",
-      });
-
-      let portfolioFilters = select("#portfolio-flters li", true);
-
-      on(
-        "click",
-        "#portfolio-flters li",
-        function (e) {
-          e.preventDefault();
-          portfolioFilters.forEach(function (el) {
-            el.classList.remove("filter-active");
-          });
-          this.classList.add("filter-active");
-
-          portfolioIsotope.arrange({
-            filter: this.getAttribute("data-filter"),
-          });
-          portfolioIsotope.on("arrangeComplete", function () {
-            AOS.refresh();
-          });
-        },
-        true
-      );
-    }
-  });
-
-  /*
-   * Initiate portfolio lightbox
-   */
-  const portfolioLightbox = GLightbox({
-    selector: ".portfolio-lightbox",
-  });
-  /*
-   * Portfolio details slider
-   */
-  new Swiper(".portfolio-details-slider", {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      type: "bullets",
-      clickable: true,
-    },
-  });
-
-  /*
-   * Testimonials slider
-   */
-  new Swiper(".testimonials-slider", {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    slidesPerView: "auto",
-    pagination: {
-      el: ".swiper-pagination",
-      type: "bullets",
-      clickable: true,
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      },
-    },
-  });
-
-  /*
-   * Initiate Pure Counter
-   */
+  AOS.init();
   new PureCounter();
 };
