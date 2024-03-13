@@ -281,12 +281,11 @@ section {
     top: 0;
     right: 0;
     bottom: 0;
-    width: 50vw;
+    width: 70vw;
     max-width: 400px;
     transform: translateX(100%);
     transition: transform ease-in-out 0.5s;
     z-index: 9997;
-
     background: #040b14;
     overflow-y: auto;
 }
@@ -536,7 +535,7 @@ section {
   align-items: center;
 }
 
-.about .content ul i {
+.about .content ul i, .col-sm i {
   font-size: 16px;
   margin-right: 5px;
   color: red;

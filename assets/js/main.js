@@ -112,8 +112,8 @@ window.onload = () => {
       let section = select(navbarlink.hash);
       if (!section) return;
       if (
-        position >= section.offsetTop &&
-        position <= section.offsetTop + section.offsetHeight
+          (position) >= section.offsetTop &&
+              (position) <= section.offsetTop + section.offsetHeight
       ) {
         navbarlink.classList.add("active");
       } else {
@@ -135,23 +135,6 @@ window.onload = () => {
       behavior: "smooth",
     });
   };
-
-  /*
-   * Back to top button
-   */
-
-  let backtotop = select(".back-to-top");
-  if (backtotop) {
-    const toggleBacktotop = () => {
-      if (window.scrollY > 100) {
-        backtotop.classList.add("active");
-      } else {
-        backtotop.classList.remove("active");
-      }
-    };
-    window.addEventListener("load", toggleBacktotop);
-    onscroll(document, toggleBacktotop);
-  }
 
   /*
    * Scroll with ofset on page load with hash links in the url

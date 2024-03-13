@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <meta name="theme-color" content="red" />
+        <meta name="theme-color" content="#ff0000" />
         <title>Portfolio</title>
         <meta content="" name="description" />
         <meta content="" name="keywords" />
 
-        <link href="assets/img/favicon.png" rel="icon" />
+        <!--<link href="assets/img/favicon.png" rel="icon" />-->
         <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
         <link
             href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -46,24 +46,24 @@
                 <nav id="navbar" class="nav-menu navbar">
                     <ul>
                         <li>
-                            <a href="#hero" class="nav-link scrollto"
-                                ><i class="bx bx-home"></i> <span>Home</span></a
+                            <a href="#hero" class="nav-link "
+                                ><i class="bx bx-home"></i> <span>Intro</span></a
                             >
                         </li>
                         <li>
-                            <a href="#about" class="nav-link scrollto"
+                            <a href="#about" class="nav-link "
                                 ><i class="bx bx-user"></i>
                                 <span>About</span></a
                             >
                         </li>
                         <li>
-                            <a href="#resume" class="nav-link scrollto"
+                            <a href="#resume" class="nav-link"
                                 ><i class="bx bx-file-blank"></i>
                                 <span>Resume</span></a
                             >
                         </li>
                         <li>
-                            <a href="#awards" class="nav-link scrollto"
+                            <a href="#awards" class="nav-link"
                                 ><i class="bx bx-award"></i>
                                 <span>Awards</span></a
                             >
@@ -212,6 +212,19 @@
             </div>
         </section>
 
+	<section id="resume">
+	  <h2 class="section-title">A detailed overview</h2>
+	  <div >
+	    <!--
+	    <h3> Using the <i> download attribute of <a> tag </i> to create file download button using JavaScript. </h3>-->
+	    <p>If you are looking for my resume, here is it </p>
+	    <a href = "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg"
+	       Download = "test_image">
+	      <button type = "button"> Download </button>
+	    </a>
+	  </div>
+	</section>
+
         <section class="body container" id="achievements">
             <h2 class="section-title">What i made so far</h2>
 
@@ -302,6 +315,13 @@
             </div>
         </section>
 
+	<section id="awards" class="body">
+	  <h2 class="section-title">The Awards</h2>
+	    <div >
+	    </div>
+	</section>
+	
+
         <section class="body" id="skills">
             <div class="container">
                 <h2 class="section-title">Skills</h2>
@@ -346,7 +366,7 @@
                             <div
                                 class="progress-bar"
                                 role="progressbar"
-                                aria-valuenow="55"
+                                aria-valuenow="50"
                                 aria-valuemin="0"
                                 aria-valuemax="100"
                             ></div>
@@ -359,7 +379,7 @@
                             <div
                                 class="progress-bar"
                                 role="progressbar"
-                                aria-valuenow="75"
+                                aria-valuenow="80"
                                 aria-valuemin="0"
                                 aria-valuemax="100"
                             ></div>
@@ -376,7 +396,7 @@
                             <div
                                 class="progress-bar"
                                 role="progressbar"
-                                aria-valuenow="80"
+                                aria-valuenow="100"
                                 aria-valuemin="0"
                                 aria-valuemax="100"
                             ></div>
@@ -389,7 +409,7 @@
                             <div
                                 class="progress-bar"
                                 role="progressbar"
-                                aria-valuenow="90"
+                                aria-valuenow="100"
                                 aria-valuemin="0"
                                 aria-valuemax="100"
                             ></div>
@@ -402,7 +422,7 @@
                             <div
                                 class="progress-bar"
                                 role="progressbar"
-                                aria-valuenow="55"
+                                aria-valuenow="80"
                                 aria-valuemin="0"
                                 aria-valuemax="100"
                             ></div>
@@ -417,7 +437,7 @@
                             <div
                                 class="progress-bar"
                                 role="progressbar"
-                                aria-valuenow="55"
+                                aria-valuenow="100"
                                 aria-valuemin="0"
                                 aria-valuemax="100"
                             ></div>
@@ -426,13 +446,14 @@
                 </div>
             </div>
         </section>
-        <section class="body">
+        <section class="body" id="contact">
             <div class="container">
                 <h2 class="section-title">Contact</h2>
                 <div id="contactDiv">
                         <div class="row">
                           <div data-aos="fade-up" class="col-sm">
                             <h3 class="contactHead">Drop Me A Mail !</h3>
+			    <i class="bi bi-envelope-at-fill"></i>
                           </div>
                           <div class="col-sm">
                             <h3 class="contactHead">One of three columns</h3> 
