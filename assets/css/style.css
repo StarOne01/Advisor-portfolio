@@ -40,7 +40,6 @@ section {
     text-align: center;
     margin: auto;
     border-radius: 10px;
-   
 }
 
 
@@ -683,32 +682,48 @@ p {
 }
 
 .awardsContainer {
-    display: flex;
-    background-color: black;
-    flex-direction:column;
-  }
-  
-  .awardsContainer > div > p {
-    margin: 0;
+    align-items: center;
+    justify-items: center;
+     background-color: black;
+}
+
+.awardsContainer > div > p {
+   
     text-align: center;
     font-size: 20px;
     font-weight: 500;
     font-style: italic;
     padding: 0;
-  }
-  .awardsContainer > div {
+}
+
+.awardsContainer > div {
     background-color: black;
     border-radius: 20px;
-    border: 1px solid red;
+    display: inline-block; 
+    border: 1px solid #424242ad;;
     margin: 10px;
-    width: 95vw;
+    width:72vw;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     padding: 20px;
-    max-width: 500px;
+    max-width: 300px;
     height: fit-content;
     font-size: 30px;
+  }
+
+.awardsContainer > div:hover {
+     
+	  border-radius: 21px;
+	  background: black;
+	  box-shadow:  2px 2px 4px #fff8f888,
+		       -2px -2px 4px #fff8f888;
+  }
+
+.awardImgs {
+      width: 90%;
+      max-width: 300px;
+      padding: 20px;
   }
 
 
