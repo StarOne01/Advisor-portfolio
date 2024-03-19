@@ -599,6 +599,11 @@ p {
     }
 }
 
+::selection {
+    background-color   :rgba(255, 0,0, 0.7);
+    color:black;
+}
+
 .highlight {
     background-color   :hsl(0, 93%, 62%);
    color:black;
