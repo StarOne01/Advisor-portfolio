@@ -1,8 +1,8 @@
 window.onload = () => {
+
   const toggleButton = document.querySelector(".mobile-nav-toggle");
   const menu = document.querySelector(".header");
   var is_menu_open = 0;
-
   toggleButton.addEventListener("click", () => {
     if (is_menu_open) {
       menu.style.transform = "translateX(100%)";
