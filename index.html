@@ -18,6 +18,7 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="assets/js/main.js"></script>
   <link href="assets/css/style.css" rel="stylesheet" />
 </head>
@@ -299,6 +300,23 @@
     
     <section id="awards" class="body container">
       <h2 class="section-title">The Awards</h2>
+      <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+   <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide"><img src="assets/imgs/Conference-with-industry-experts_1.webp"></div>
+      <div class="swiper-slide"><img src="assets/imgs/KGISL-1.webp"></div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+
+    </div>
+        <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
       <div class="awardsContainer" data-aos="fade-up">
         <a href="assets/imgs/awards/EDC.jpg">
         <div>
@@ -469,7 +487,12 @@
     </section>
   </main>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script src="script.js">
+  </script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
@@ -478,6 +501,18 @@
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+      var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </body>
 
 </html>
