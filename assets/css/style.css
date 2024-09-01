@@ -2,15 +2,27 @@
 For the whole page
 */
 
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+#hero h1 {
+    font-family: "Montserrat", sans-serif !important;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
 html {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
 
 .swiper {
+    scroll-snap-type: y mandatory;
+    scrollbar-color: red;
+    scroll-behavior: smooth;
+    scroll-snap-stop:always;
     height: 80vh;
     max-width: 90vw;
+    padding: 30px;
   }
 
   .swiper-slide {
@@ -22,7 +34,7 @@ html {
     font-weight: bold;
     color: #fff;
     object-fit: scale-down;
-    background: #000;
+    background: #00000071;
     z-index: 0;
   }
 
@@ -506,7 +518,7 @@ p {
 #intro {
     width: 100%;
     height: 100vh;
-    background: url("../imgs/hero-bg.webp") top center;
+    background: url("../imgs/hero-bg.jpg") top center;
     background-size: cover;
 }
 
